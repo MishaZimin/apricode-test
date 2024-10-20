@@ -1,3 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  p {
+    @apply font-base text-graphite leading-[22px];
+  }
+}
+
+@layer utilities {
+  .animation {
+    @apply transform transition duration-300;
+  }
+}
