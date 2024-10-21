@@ -46,9 +46,11 @@ export const addTaskToParent = (
       title,
       description,
       isCompleted: false,
+      isExpanded: false,
       subtasks: [],
     };
     parentTask.subtasks.push(newSubtask);
+    updateParentTaskStatus(parentTask, tasks);
   }
 };
 

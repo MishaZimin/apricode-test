@@ -6,12 +6,12 @@
 
 @layer base {
   p {
-    @apply font-base text-graphite leading-[22px];
+    @apply font-base leading-[22px] text-graphite;
   }
 }
 
 @layer utilities {
   .animation {
-    @apply transform transition duration-300;
+    @apply transform transition duration-200;
   }
 }

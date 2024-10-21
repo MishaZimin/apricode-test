@@ -1,16 +1,20 @@
+import { observer } from "mobx-react-lite";
 import { Task } from "src/stores";
+import { toggleExpand } from "src/helpers/ToggleExpand";
 
 type TaskTitleProps = {
   task: Task;
-  onToggleExpand: () => void;
 };
 
-const TaskTitle = ({ task, onToggleExpand }: TaskTitleProps) => {
+const TaskTitle = observer(({ task }: TaskTitleProps) => {
   return (
-    <button onClick={onToggleExpand}>
+    <button
+      className="flex w-full text-left"
+      onClick={() => toggleExpand(task)}
+    >
       <p>{task.title}</p>
     </button>
   );
-};
+});
 
 export default TaskTitle;

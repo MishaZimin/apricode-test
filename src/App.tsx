@@ -5,7 +5,7 @@ const App = () => {
   return (
     <>
       <div className="flex flex-row w-full h-full min-h-svh">
-        <div className="w-1/2 border-r-[2px] border-gray-300 p-4">
+        <div className="w-1/2 border-r-[1px] border-gray-400 p-4">
           <TaskTree />
         </div>
         <div className="w-1/2 bg-opacity-[4%] bg-none p-4">

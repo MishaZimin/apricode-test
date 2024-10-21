@@ -5,7 +5,7 @@ import TaskItem from "../TaskItem/TaskItem";
 
 const TaskTree = observer(() => {
   return (
-    <div className="flex flex-col gap-[8px]">
+    <div className="flex flex-col gap-[0px]">
       {taskStore.tasks.map((task) => (
         <TaskItem key={task.id} task={task} />
       ))}

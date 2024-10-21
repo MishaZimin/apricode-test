@@ -6,6 +6,7 @@ export const initialTasks: Task[] = [
     title: "Новая задача",
     description: "",
     isCompleted: false,
+    isExpanded: false,
     subtasks: [],
   },
 ];
