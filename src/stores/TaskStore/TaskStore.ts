@@ -29,6 +29,7 @@ class TaskStore {
     };
 
     this.tasks.push(newTask);
+    this.searchQuery = "";
   }
 
   selectTask(id: number) {
@@ -45,10 +46,12 @@ class TaskStore {
 
   addTaskToParent(parentId: number, title: string, description: string) {
     addTaskToParent(parentId, title, description, this.tasks);
+    this.searchQuery = "";
   }
 
   deleteTask(taskId: number) {
     this.tasks = deleteTask(taskId, this.tasks);
+    this.searchQuery = "";
   }
 
   toggleTaskExpand(taskId: number) {
