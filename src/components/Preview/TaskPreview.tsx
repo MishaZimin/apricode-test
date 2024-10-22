@@ -10,13 +10,13 @@ const TaskPreview = observer(() => {
             type="text"
             value={previewStore.task.title}
             onChange={(e) => previewStore.setTitle(e.target.value)}
-            className="animation w-full rounded-[8px] border border-gray-400 px-[12px] py-[8px] focus:border-gray-500 focus:outline-none"
+            className="animation w-full rounded-[10px] border border-gray-400 px-[12px] py-[8px] focus:border-gray-500 focus:outline-none"
             placeholder="Название задачи"
           />
           <textarea
             value={previewStore.task.description}
             onChange={(e) => previewStore.setDescription(e.target.value)}
-            className="animation min-h-[120px] w-full rounded-[8px] border border-gray-400 px-[12px] py-[8px] focus:border-gray-500 focus:outline-none"
+            className="animation min-h-[120px] w-full rounded-[10px] border border-gray-400 px-[12px] py-[8px] focus:border-gray-500 focus:outline-none"
             placeholder="Описание задачи"
           />
         </>
