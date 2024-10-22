@@ -18,6 +18,19 @@ class TaskStore {
     );
   }
 
+  addParentTask(title: string, description: string) {
+    const newTask: Task = {
+      id: Date.now(),
+      title,
+      description,
+      isExpanded: false,
+      subtasks: [],
+      isCompleted: false,
+    };
+
+    this.tasks.push(newTask);
+  }
+
   selectTask(id: number) {
     this.selectedTaskId = id;
   }
@@ -35,7 +48,7 @@ class TaskStore {
   }
 
   deleteTask(taskId: number) {
-    if (taskId !== 1) this.tasks = deleteTask(taskId, this.tasks);
+    this.tasks = deleteTask(taskId, this.tasks);
   }
 
   toggleTaskExpand(taskId: number) {
